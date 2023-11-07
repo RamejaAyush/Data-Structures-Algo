@@ -1,3 +1,9 @@
+/*
+ * Best time to buy and sell the stock
+ * Complexity: {time: O(N), space: O(1)}
+ * @params {prices: given array of integers which are prices}
+ * @returns {maxProfit: integer}
+ */
 const maxProfit = (prices) => {
   let maxProfit = 0
   let minPrice = prices[0]
