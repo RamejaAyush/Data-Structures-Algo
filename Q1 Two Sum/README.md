@@ -9,7 +9,7 @@ now we can create couples which contains the index of element which sums upto th
 
 ### Code
 
-```javascript
+```
 /*
  * Two Sum Brute Force
  * Complexity: {time: O(N^2), space: O(1)}
