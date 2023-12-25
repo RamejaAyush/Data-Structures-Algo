@@ -1,3 +1,9 @@
+/*
+ * Time Complex: O(log N) because of binary search
+ * Space Complex: O(1)
+ * @param {nums: number[]} given array
+ * @returns {element: number} returns the min element in the array
+ */
 function findMin(nums: number[]): number {
   let left: number = 0,
     right: number = nums.length - 1
