@@ -1,6 +1,6 @@
 /*
  * Time Complex: O(N^2), nested loops, n is the number of elements in the array
- * Space Complex" O(1)
+ * Space Complex: O(1)
  * @param {nums: number[]} given array
  * @returns {triplets: number[][]} contains all the unique triplets
  */
