@@ -5,47 +5,45 @@
  * @returns: This question requires to modify the given matrix, returning for examples
  */
 function setZeros(matrix: number[][]): number[][] {
-  let firstRowContainsZero: boolean = false
-  let firstColContainsZero: boolean = false
+  let firstRowHasZero: boolean = false
+  let firstColHasZero: boolean = false
 
-  for (let row = 0; row < matrix.length; row++) {
-    if (matrix[row][0] === 0) {
-      firstColContainsZero = true
-    }
+  for (let firstRow: number = 0; firstRow < matrix.length; firstRow++) {
+    if (matrix[firstRow][0] === 0) firstColHasZero = true
+    break
   }
 
-  for (let col = 0; col < matrix[0].length; col++) {
-    if (matrix[0][col] === 0) {
-      firstRowContainsZero = true
-    }
+  for (let firstCol: number = 0; firstCol < matrix[0].length; firstCol++) {
+    if (matrix[0][firstCol] === 0) firstRowHasZero = true
+    break
   }
 
-  for (let row = 1; row < matrix.length; row++) {
-    for (let col = 1; col < matrix.length; col++) {
+  for (let row: number = 1; row < matrix.length; row++) {
+    for (let col: number = 1; col < matrix[0].length; col++) {
       if (matrix[row][col] === 0) {
-        matrix[row][0] = 0
         matrix[0][col] = 0
+        matrix[row][0] = 0
       }
     }
   }
 
-  for (let row = 1; row < matrix.length; row++) {
-    for (let col = 1; col < matrix.length; col++) {
+  for (let row: number = 1; row < matrix.length; row++) {
+    for (let col: number = 1; col < matrix[0].length; col++) {
       if (matrix[row][0] === 0 || matrix[0][col] === 0) {
         matrix[row][col] = 0
       }
     }
   }
 
-  if (firstRowContainsZero) {
-    for (let col = 0; col < matrix[0].length; col++) {
-      matrix[0][col] = 0
+  if (firstColHasZero) {
+    for (let row: number = 0; row < matrix.length; row++) {
+      matrix[row][0] = 0
     }
   }
 
-  if (firstColContainsZero) {
-    for (let row = 0; row < matrix.length; row++) {
-      matrix[row][0] = 0
+  if (firstRowHasZero) {
+    for (let col: number = 0; col < matrix[0].length; col++) {
+      matrix[0][col] = 0
     }
   }
 
